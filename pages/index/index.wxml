@@ -1,0 +1,92 @@
+<view class="header">
+    <text class="title">五合一收款码</text>
+    <text>姬长信收款码在线生成</text>
+    <text>35个模板供您选择,打造最简洁收款服务</text>
+</view>
+<view class="tips">
+    <view class="container">
+        <view class="info">
+            <text>五合一收款码，快人一步</text>
+            <view>您的每一次分享，都将成为我的动力！</view>
+        </view>
+    </view>
+</view>
+<view class="form">
+    <view class="container">
+        <view class="item item-01">
+            <input bindchange="inputLink" data-prop="qq" placeholder="商户QQ号"></input>
+        </view>
+        <view class="item">
+            <input bindchange="inputLink" data-prop="aliLink" placeholder="支付宝收款链接" value="{{aliLink}}"></input>
+            <button bindtap="scan" data-prop="aliLink" size="mini" type="warn">
+                <image class="icon-clound" src="../../assets/images/clound.png"></image>
+                <text>选择支付宝收款码</text>
+            </button>
+        </view>
+        <view class="item">
+            <input bindchange="inputLink" data-prop="wechatLink" placeholder="微信收款链接" value="{{wechatLink}}"></input>
+            <button bindtap="scan" data-prop="wechatLink" size="mini" type="warn">
+                <image class="icon-clound" src="../../assets/images/clound.png"></image>
+                <text>选择微信收款码</text>
+            </button>
+        </view>
+        <view class="item">
+            <input bindchange="inputLink" data-prop="qqLink" placeholder="QQ收款链接" value="{{qqLink}}"></input>
+            <button bindtap="scan" data-prop="qqLink" size="mini" type="warn">
+                <image class="icon-clound" src="../../assets/images/clound.png"></image>
+                <text>选择QQ收款码</text>
+            </button>
+        </view>
+		        <view class="item">
+            <input bindchange="inputLink" data-prop="qqLink" placeholder="京东钱包收款链接" value="{{qqLink}}"></input>
+            <button bindtap="scan" data-prop="qqLink" size="mini" type="warn">
+                <image class="icon-clound" src="../../assets/images/clound.png"></image>
+                <text>选择 京 东 收款码</text>
+            </button>
+        </view>
+				        <view class="item">
+            <input bindchange="inputLink" data-prop="qqLink" placeholder="百度钱包收款链接" value="{{qqLink}}"></input>
+            <button bindtap="scan" data-prop="qqLink" size="mini" type="warn">
+                <image class="icon-clound" src="../../assets/images/clound.png"></image>
+                <text>选择 百 度 收款码</text>
+            </button>
+        </view>
+        <ad unitId="adunit-c9930bf7469b0656"></ad>
+    </view>
+</view>
+<view class="card-list">
+    <view class="container">
+        <radio-group bindchange="selectCard" name="tpl_id">
+            <view class="content">
+                <view class="item" wx:for="{{cardList}}" wx:key="id">
+                    <view class="info">
+                        <image data-id="item.id" mode="widthFix" src="{{item.url}}"></image>
+                        <view class="subtitle">
+                            <radio checked="{{item.id===selectedCardId}}" value="{{item.id}}">
+                                <text>{{item.name}}</text>
+                            </radio>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </radio-group>
+    </view>
+</view>
+<view class="generate">
+    <view class="container">
+        <button bindtap="generateCode" class="bg-blue">立即生成</button>
+    </view>
+    <view class="generate-img" hidden="{{!showCodeImg}}">
+        <image bindlongpress="saveCode" mode="widthFix" src="{{codeImgSrc}}"></image>
+    </view>
+</view>
+<view class="footer">
+    <view class="container">
+        <view>Copyright © 2017
+      <navigator class="blue" url="/pages/other/other?url=https://blog.isoyu.com">姬长信</navigator>
+        </view>
+    </view>
+</view>
+<view class="hidden-canvas">
+    <canvas canvasId="compositeCode" style="width:{{canvasWidth}}px;height:{{canvasHeight}}px"></canvas>
+</view>

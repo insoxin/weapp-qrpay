@@ -1,0 +1,165 @@
+page {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    padding-left: 24rpx;
+    padding-right: 24rpx;
+}
+
+.blue {
+    color: #0e90d2;
+}
+
+.bg-blue {
+    background-color: #0e90d2;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30rpx 0;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 30rpx;
+}
+
+.header .title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 30rpx;
+}
+
+.tips {
+    margin-bottom: 30rpx;
+}
+
+.tips>.container .info {
+    padding: 30rpx;
+    border: 1px solid #0e90d2;
+    display: flex;
+    flex-direction: column;
+}
+
+.tips>.container .info view navigator {
+    display: inline;
+}
+
+.form {
+    margin-bottom: 60rpx;
+}
+
+.form .item {
+    margin-bottom: 30rpx;
+    display: flex;
+}
+
+.form .item input {
+    flex: 6;
+    height: auto;
+    min-height: auto;
+    padding: 10rpx;
+    line-height: 1.2;
+    border: 1px solid #ccc;
+}
+
+.form .item-01 {
+    width: 100%;
+}
+
+.form .item-01 input {
+    width: 100%;
+}
+
+.form .item button {
+    flex: 4;
+    border-radius: 0;
+    padding: 0;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+
+.form .item button text {
+    margin-left: 10rpx;
+}
+
+.form .item button .icon-clound {
+    width: 34rpx;
+    height: 19rpx;
+}
+
+.card-list .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.card-list .item {
+    width: 33.33%;
+    box-sizing: border-box;
+    padding: 0 12rpx;
+    margin-bottom: 60rpx;
+}
+
+.card-list .item .info {
+    padding: 4rpx;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+.card-list .item image {
+    width: 100%;
+    margin-bottom: 18rpx;
+}
+
+.card-list .item .info .subtitle {
+    text-align: center;
+    margin-bottom: 18rpx;
+}
+
+.card-list .item .info .subtitle radio {
+    transform: scale(0.8);
+}
+
+.generate {
+    margin-bottom: 30rpx;
+}
+
+.generate button {
+    display: inline-block;
+    border-radius: 0;
+    padding: 10rpx;
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+.generate .generate-img {
+    text-align: center;
+}
+
+.generate .generate-img image {
+    width: 412rpx;
+}
+
+.footer>.container>view {
+    border-top: 1px solid #ddd;
+    padding: 40rpx 0;
+}
+
+.footer>.container>view>navigator {
+    display: inline-block;
+}
+
+.hidden-canvas {
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
