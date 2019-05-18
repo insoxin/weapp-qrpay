@@ -16,71 +16,71 @@ var a = [ {
     id: "1",
     name: "纯黄模板"
 }, {
-    url: "https://wx2.sinaimg.cn/large/005zWjpngy1fvajrc68gqj30tv10idpc.jpg",
+    url: "img/2.jpg",
     id: "2",
     name: "蓝白款式"
 }, {
-    url: "https://wx2.sinaimg.cn/large/005zWjpngy1fvajrd25lcj31gh21te81.jpg",
+    url: "img/3.jpg",
     id: "3",
     name: "纯蓝款式"
 }, {
-    url: "https://wx2.sinaimg.cn/large/005zWjpngy1fvajrcqedvj30u01bs0zc.jpg",
+    url: "img/4.jpg",
     id: "4",
     name: "白灰打印"
 }, {
-    url: "https://wx2.sinaimg.cn/large/005zWjpngy1fvajrcx37dj30u01eegvl.jpg",
+    url: "img/5.jpg",
     id: "5",
     name: "红包款式"
 }, {
-    url: "https://wx2.sinaimg.cn/large/005zWjpngy1fvajrd816rj30m80dwdiq.jpg",
+    url: "img/6.jpg",
     id: "6",
     name: "摔钱款式"
 }, {
-    url: "https://wx2.sinaimg.cn/large/005zWjpngy1fvajrdff22j31b80xw479.jpg",
+    url: "img/7.jpg",
     id: "7",
     name: "绿色横版"
 }, {
-    url: "https://wx2.sinaimg.cn/large/005zWjpngy1fvajrdnla1j30u01hcn62.jpg",
+    url: "img/8.jpg",
     id: "8",
     name: "蓝白款式"
 }, {
-    url: "https://wx2.sinaimg.cn/large/005zWjpngy1fvajre8ccoj31z4140tok.jpg",
+    url: "img/9.jpg",
     id: "9",
     name: "卡片板式"
 }, {
-    url: "https://wx2.sinaimg.cn/large/005zWjpngy1fvajrgt7rdj32qj3ncu10.jpg",
+    url: "img/10.jpg",
     id: "10",
     name: "快捷支付"
 }, {
-    url: "https://wx2.sinaimg.cn/large/005BYqpggy1fvlt1clnj4j30u01hctlr.jpg",
+    url: "img/11.jpg",
     id: "11",
     name: "九月开学"
 }, {
-    url: "https://wx2.sinaimg.cn/large/005BYqpggy1fvsp7z9v49j30fr0nodr1.jpg",
+    url: "img/12.jpg",
     id: "12",
     name: "十月国庆"
 }, {
-    url: "https://wx2.sinaimg.cn/large/005BYqpggy1fvzkqel0hqj30u015f79x.jpg",
+    url: "img/13.jpg",
     id: "13",
     name: "蓝底白版"
 }, {
-    url: "https://wx2.sinaimg.cn/large/005BYqpggy1fwdt2xqxgvj30qz16ddmv.jpg",
+    url: "img/14.jpg",
     id: "14",
     name: "招财猫版"
 }, {
-    url: "https://wx2.sinaimg.cn/large/005BYqpggy1fwdt2tnfgwj30u019tn2b.jpg",
+    url: "img/15.jpg",
     id: "15",
     name: "白灰款式"
 }, {
-    url: "https://wx2.sinaimg.cn/large/005BYqpgly1fwdt2x8c3vj30u01hcgtu.jpg",
+    url: "img/16.jpg",
     id: "16",
     name: "指纹红包"
 }, {
-    url: "https://wx2.sinaimg.cn/large/005BYqpgly1fwdt2w8yjgj30u01hcjxl.jpg",
+    url: "img/17.jpg",
     id: "17",
     name: "白绿饭团"
 }, {
-    url: "https://wx2.sinaimg.cn/large/005BYqpggy1fwtxjmhce7j30pg15fwlc.jpg",
+    url: "img/19.jpg",
     id: "19",
     name: "小程序码"
 } ], i = {
@@ -277,7 +277,7 @@ Page({
         this.setData(t({}, i, a));
     },
     generateCode: function(t) {
-        var a = this, n = i[this.data.selectedCardId], r = "https://api.isoyu.com/qr/qr.php?alipay=" + e(this.data.aliLink) + "&vxpay=" + e(this.data.wechatLink) + "&qqpay=" + e(this.data.qqLink) + "&uin=" + this.data.qq, s = "https://qrpay.isoyu.com/" + n.tpl_src, g = n.tpl_w < 720 ? 1 : 720 / n.tpl_w;
+        var a = this, n = i[this.data.selectedCardId], r = "https://api.isoyu.com/qr/qr.jsp?alipay=" + e(this.data.aliLink) + "&vxpay=" + e(this.data.wechatLink) + "&qqpay=" + e(this.data.qqLink) + "&uin=" + this.data.qq, s = "https://qrpay.isoyu.com/" + n.tpl_src, g = n.tpl_w < 720 ? 1 : 720 / n.tpl_w;
         a.setData({
             canvasWidth: n.tpl_w * g,
             canvasHeight: n.tel_h * g
