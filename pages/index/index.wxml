@@ -38,15 +38,15 @@
             </button>
         </view>
 		        <view class="item">
-            <input bindchange="inputLink" data-prop="qqLink" placeholder="京东钱包收款链接" value="{{qqLink}}"></input>
-            <button bindtap="scan" data-prop="qqLink" size="mini" type="warn">
+            <input bindchange="inputLink" data-prop="jdLink" placeholder="京东钱包收款链接" value="{{jdLink}}"></input>
+            <button bindtap="scan" data-prop="jdLink" size="mini" type="warn">
                 <image class="icon-clound" src="../../assets/images/clound.png"></image>
                 <text>选择 京 东 收款码</text>
             </button>
         </view>
 				        <view class="item">
-            <input bindchange="inputLink" data-prop="qqLink" placeholder="百度钱包收款链接" value="{{qqLink}}"></input>
-            <button bindtap="scan" data-prop="qqLink" size="mini" type="warn">
+            <input bindchange="inputLink" data-prop="bdLink" placeholder="百度钱包收款链接" value="{{bdLink}}"></input>
+            <button bindtap="scan" data-prop="bdLink" size="mini" type="warn">
                 <image class="icon-clound" src="../../assets/images/clound.png"></image>
                 <text>选择 百 度 收款码</text>
             </button>
