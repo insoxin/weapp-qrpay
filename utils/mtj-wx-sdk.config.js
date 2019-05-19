@@ -1,4 +1,4 @@
 module.exports = {
-    appKey: "f08aaa43e5",
+    appKey: "364c4a65b1",
     getLocation: !1
 };
