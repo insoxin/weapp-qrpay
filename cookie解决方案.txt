@@ -1,0 +1,31 @@
+小程序不像web浏览器有cookie机制，在默认使用cookie存sessionid的机制下，后台将无法正常使用session功能，如果正确使用session呢，提供两个方案。
+
+1、将sessionid通过url进行传递
+    用户每次登录成功后将生成的sessionid值使用参数回传到客户端， 客户端接到sessionid后保存到本地， 在发起网络请求的底层接口中默认自动带上sessionid=本地存储的sessionid值。
+    需要配合服务器一起更改，服务器后端默认使用cookie机制
+
+2、无缝对接cookie， 将服务器的set-cookie值保存到本地，再请求的时候模拟浏览器头部信息并带上保存的cookie信息
+     
+    1）保存cookie值： 
+    _XHR('login',{'code':res.code}).then(function( ret ){
+        ret.header["Set-Cookie"] != undefined && wx.setStorageSync("cookie", ret.header["Set-Cookie"]);
+    });
+
+   2）请求的时候自动带上cookie信息
+   var header={};
+    header = { 
+      'content-type': 'application/x-www-form-urlencoded'
+    };
+    var cookie = wx.getStorageSync("cookie");
+    if( url != 'login' && !isNull( cookie ) ){
+        header['cookie'] = cookie;
+    }
+  	将header 赋值到 request的header内
+   wx.request({
+      url: qryDomian + url + '.html',
+      data: _data,
+      method: 'POST',
+      header: header,
+      dataType:'json' ......
+      
+ 第二种方案服务器无需做任务操作。
